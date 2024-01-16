@@ -12,17 +12,51 @@ inquirer
     {
         type: 'input',
         name: 'description',
-        message: 'Where are you from?',
+        message: 'Enter a short description of your project:',
       },
       {
         type: 'input',
-        name: 'color',
-        message: 'What is your favorite color?',
+        name: 'installation',
+        message: 'What steps are required to install your project?',
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: 'How does the user use your project?',
+      },
+      {
+        type: 'input',
+        name: 'features',
+        message: 'What features does this project have?',
+      },
+      {
+        type: 'input',
+        name: 'contribute',
+        message: 'How can others contribute to this project?',
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'What tests were performed?',
+      {
+        type: 'input',
+        name: 'credits',
+        message: 'Who contributed to this project?',
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'What license does this project use?',
+        choices: ['None','Apache-2.0','GPL-3.0','MIT','BSD-2-Clause','BSD-3-Clause','BSL-1.0','CC0-1.0','EPL-2.0','AGPL-3.0','GPL-2.0','LGPL-2.1','MPL-2.0','Unlicense']
+      },
+
       },
   ])
   .then((data) => {
-    const html = `
+    const readme = `
     # <${data.name}>
+
+    ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
     ## Description
     
@@ -33,65 +67,42 @@ inquirer
     - What problem does it solve?
     - What did you learn?
     
-    ## Table of Contents (Optional)
+    ## Table of Contents
     
     If your README is long, add a table of contents to make it easy for users to find what they need.
     
     - [Installation](#installation)
     - [Usage](#usage)
+    - [Features](#features)
+    - [How to Contribute](#usage)
+    - [Tests](#test)
     - [Credits](#credits)
     - [License](#license)
     
     ## Installation
     
-    What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
     
     ## Usage
     
-    Provide instructions and examples for use. Include screenshots as needed.
-    
-    To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    
-        ```md
-        ![alt text](assets/images/screenshot.png)
-        ```
-    
-    ## Credits
-    
-    List your collaborators, if any, with links to their GitHub profiles.
-    
-    If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-    
-    If you followed tutorials, include links to those here as well.
-    
-    ## License
-    
-    The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-    
-    ---
-    
-    🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-    
-    ## Badges
-    
-    ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-    
-    Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-    
+
     ## Features
     
-    If your project has a lot of features, list them here.
     
     ## How to Contribute
     
-    If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
     
     ## Tests
     
-    Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+
+    ## Credits
+    
+    
+    ## License
+    
+ 
     `;
 
-    fs.writeFile('test.md', html, (err) =>
-      err ? console.log(err) : console.log('Success!')
+    fs.writeFile('test.md', readme, (err) =>
+      err ? console.log(err) : console.log('Successfully created new README file!')
     );
   });
