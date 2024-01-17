@@ -1,47 +1,41 @@
-# ReadME Gen
+# n/a
 
 ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
 ## Description
 
-asfghhn
+n/a
     
 ## Table of Contents
         
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
-- [How to Contribute](#how)
-- [Tests](#test)
-- [Credits](#credits)
 - [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
     
 ## Installation
     
-asghnoagon
+n/a
     
 ## Usage
     
-awrioahgnoams,
+n/a
 
-## Features
-    
-aspnao231
-    
-## How to Contribute
-    
-acm,asigp[
-    
-## Tests
-    
-asnpx,-1-
-
-## Credits
-    
-asoljmcpil
-    
 ## License
     
 None
- 
     
+## Contributing
+    
+n/a
+    
+## Tests
+    
+n/a
+    
+## Questions
+    
+Questions regarding n/a should be directed to n/a on Github or n/a.
+ 

@@ -7,7 +7,7 @@ inquirer
     {
       type: 'input',
       name: 'name',
-      message: 'What is your project name?',
+      message: 'What is the project name?',
     },
     {
       type: 'input',
@@ -17,38 +17,38 @@ inquirer
     {
       type: 'input',
       name: 'installation',
-      message: 'What steps are required to install your project?',
+      message: 'Enter the installation steps required for this project:',
     },
     {
       type: 'input',
       name: 'usage',
-      message: 'How does the user use your project?',
-    },
-    {
-      type: 'input',
-      name: 'features',
-      message: 'What features does this project have?',
-    },
-    {
-      type: 'input',
-      name: 'contribute',
-      message: 'How can others contribute to this project?',
-    },
-    {
-      type: 'input',
-      name: 'tests',
-      message: 'What tests were performed?',
-    },
-    {
-      type: 'input',
-      name: 'credits',
-      message: 'Who contributed to this project?',
+      message: 'Enter usage instructions for this project:',
     },
     {
       type: 'list',
       name: 'license',
       message: 'What license does this project use?',
       choices: ['None', 'Apache-2.0', 'GPL-3.0', 'MIT', 'BSD-2-Clause', 'BSD-3-Clause', 'BSL-1.0', 'CC0-1.0', 'EPL-2.0', 'AGPL-3.0', 'GPL-2.0', 'LGPL-2.1', 'MPL-2.0', 'Unlicense']
+    },
+    {
+      type: 'input',
+      name: 'contribute',
+      message: 'Enter contribution guidelines for this project:',
+    },
+    {
+      type: 'input',
+      name: 'tests',
+      message: 'Enter any tests performed for this project:',
+    },
+    {
+      type: 'input',
+      name: 'username',
+      message: 'What github user should be contacted with questions regarding the project?',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'What email address should be contacted with questions regarding the project?',
     },
   ])
   .then((data) => {
@@ -64,11 +64,10 @@ ${data.description}
         
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
-- [How to Contribute](#how)
-- [Tests](#test)
-- [Credits](#credits)
 - [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
     
 ## Installation
     
@@ -78,29 +77,25 @@ ${data.installation}
     
 ${data.usage}
 
-## Features
+## License
     
-${data.features}
+${data.license}
     
-## How to Contribute
+## Contributing
     
 ${data.contribute}
     
 ## Tests
     
 ${data.tests}
-
-## Credits
     
-${data.credits}
+## Questions
     
-## License
-    
-${data.license}
+Questions regarding ${data.name} should be directed to ${data.username} on Github or ${data.email}.
  
-    `;
+`;
 
-    fs.writeFile('test.md', readme, (err) =>
+    fs.writeFile('./generated/README.md', readme, (err) =>
       err ? console.log(err) : console.log('Successfully created new README file!')
     );
   });
