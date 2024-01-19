@@ -1,6 +1,17 @@
+// Requires the file system and inquirer packages to ask questions and write new files
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+// Propmpts the user to answer questions about thier project including:
+// Project title
+// Project description
+// Installation Steps
+// Usage Instructions
+// License (selection)
+// Contribution guidelines
+// Tests
+// github user to contact with questions
+// email to contact with questions
 
 inquirer
   .prompt([
@@ -52,7 +63,11 @@ inquirer
     },
   ])
   .then((data) => {
+    // String replacement on the badge for the license so that it renders correctly
     let licenseBadge = data.license.replaceAll('-', '--');
+
+    // template literal of formatted markdown with the responses from inquirer
+
     const readme = `# ${data.name}
 
 ![Static Badge](https://img.shields.io/badge/${licenseBadge}-8A2BE2)
@@ -95,6 +110,8 @@ ${data.tests}
 Questions regarding ${data.name} should be directed to https://github.com/${data.username} on Github or ${data.email}.
  
 `;
+
+    // Writes the markdown to README.md in the generated folder after all questions have been answered
 
     fs.writeFile('./generated/README.md', readme, (err) =>
       err ? console.log(err) : console.log('Successfully created new README file!')
