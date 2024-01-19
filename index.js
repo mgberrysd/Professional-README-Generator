@@ -52,9 +52,10 @@ inquirer
     },
   ])
   .then((data) => {
+    let licenseBadge = data.license.replaceAll('-', '--');
     const readme = `# ${data.name}
 
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+![Static Badge](https://img.shields.io/badge/${licenseBadge}-8A2BE2)
 
 ## Description
 
@@ -79,7 +80,7 @@ ${data.usage}
 
 ## License
     
-${data.license}
+This project uses the ${data.license} license.
     
 ## Contributing
     
@@ -91,7 +92,7 @@ ${data.tests}
     
 ## Questions
     
-Questions regarding ${data.name} should be directed to ${data.username} on Github or ${data.email}.
+Questions regarding ${data.name} should be directed to https://github.com/${data.username} on Github or ${data.email}.
  
 `;
 
