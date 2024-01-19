@@ -10,9 +10,11 @@ This project highlighted the use of node.js to write start writing backend code 
 
 As this project was not deployed, the repo of the project can be found at https://github.com/mgberrysd/Professional-README-Generator
 
-When loaded the page should appear as:
+When run on the command line the user should see the following:
 
-![Weather dashboard page deployed via github pages](assets/images/weather-dashboard.png)
+![README generator question prompt when run from the command line](assets/readme_cli.png)
+
+A video of the application being run can be found at https://drive.google.com/file/d/1mgxvi4UDHekJcSXf8pPlFyIGplHQ4j7A/view
 
 ## Credits
 

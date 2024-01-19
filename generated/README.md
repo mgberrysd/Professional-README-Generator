@@ -1,10 +1,10 @@
-# m
+# readme generator
 
-![Static Badge](https://img.shields.io/badge/no-8A2BE2)
+![Static Badge](https://img.shields.io/badge/Apache--2.0-8A2BE2)
 
 ## Description
 
-m
+hw 9
     
 ## Table of Contents
         
@@ -17,25 +17,25 @@ m
     
 ## Installation
     
-m
+n/a
     
 ## Usage
     
-m
+run node index.js and answer questions
 
 ## License
     
-This project uses the None license.
+This project uses the Apache-2.0 license.
     
 ## Contributing
     
-m
+contact on github
     
 ## Tests
     
-mm
+mgberrysd
     
 ## Questions
     
-Questions regarding m should be directed to https://github.com/m on Github or m.
+Questions regarding readme generator should be directed to https://github.com/mgberrysd on Github or mgberrysd@gmail.com.
  
